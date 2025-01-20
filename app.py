@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,render_template
 import time
 from datetime import datetime, timedelta
 from collections import defaultdict
@@ -21,8 +21,7 @@ users = {"admin@123": {"password": "admin@123", "locked": False}}
 @app.route("/")
 def login_page():
     try:
-        with open("index.html", "r") as file:
-            return file.read()
+        return render_template('index.html')
     except FileNotFoundError:
         return "Login page not found. Please ensure 'index.html' is available.", 404
 
