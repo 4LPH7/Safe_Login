@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Signup</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+</head>
+<body>
+  <div class="gradient gradient-1"></div> <!-- Centered gradient -->
+  <div class="gradient gradient-2"></div> <!-- Top-right gradient -->
+  <div class="wrapper">
+    <div class="card-switch">
+      <label class="switch" aria-label="Toggle between Log in and Sign up">
+        <input class="toggle" type="checkbox" aria-checked="false">
+        <span class="slider" role="switch"></span>
+        <span class="card-side"></span>
+        <div class="flip-card__inner">
+          <div class="flip-card__front">
+            <div class="title">Log in</div>
+            <form id="loginForm" class="flip-card__form">
+              <input type="email" placeholder="Email" name="email" class="flip-card__input" required>
+              <input type="password" placeholder="Password" name="password" class="flip-card__input" required>
+              <button type="submit" class="flip-card__btn">Log in</button>
+            </form>
+            <p id="loginMessage"></p>
+          </div>
+          <div class="flip-card__back">
+            <div class="title">Sign up</div>
+            <form id="signupForm" class="flip-card__form">
+              <input type="text" placeholder="Name" name="name" class="flip-card__input" required>
+              <input type="email" placeholder="Email" name="email" class="flip-card__input" required>
+              <input type="password" placeholder="Password" name="password" class="flip-card__input" required>
+              <button type="submit" class="flip-card__btn">Sign up</button>
+            </form>
+            <p id="signupMessage"></p>
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <script src="{{url_for('static',filename='js/script.js')}}"></script>
+</body>
+</html>
